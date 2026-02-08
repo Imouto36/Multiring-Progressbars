@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bp0jrbm0giwdh"]
+
+[ext_resource type="PackedScene" uid="uid://dam6t7hw76jho" path="res://timer_progress.tscn" id="1_uhqqe"]
+
+[sub_resource type="Gradient" id="Gradient_ia1lp"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sasra"]
+gradient = SubResource("Gradient_ia1lp")
+
+[node name="Root" type="Control" unique_id=1581468536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=181008625]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_sasra")
+
+[node name="TimerProgress" parent="." unique_id=1643024562 instance=ExtResource("1_uhqqe")]
+layout_mode = 1
+timer_path = NodePath("../Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=1523923303]
+one_shot = true
+autostart = true
