@@ -4,5 +4,5 @@ This is a simple project in Godot 4.6 showcasing the use of multiple TextureProg
 
 A sample test scene has also been created showcasing the timer progress scene in action. Simply open the project with Godot and then run it to see how it works.
 
-Best regards,
+Best regards,  
 Imouto
